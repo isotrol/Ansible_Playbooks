@@ -1,6 +1,8 @@
 - name: Print linux distribution and version
   hosts: all
   remote_user: itadmin
+  vars:
+      timeout: 20
   tasks:
     - name: cat /etc/issue
       shell: cat /etc/issue
